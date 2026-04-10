@@ -1,1 +1,20 @@
 
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - pip install -r requirements.txt
+
+  build:
+    commands:
+      - echo "Build started"
+      - python app.py
+
+  post_build:
+    commands:
+      - echo "Build completed"
+
+artifacts:
+  files:
+    - '**/*'
